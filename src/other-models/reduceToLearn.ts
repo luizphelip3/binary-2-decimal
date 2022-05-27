@@ -1,6 +1,6 @@
-function binaryToDecimal(str) {
-    const input = String(str);
-    const binary = String(str)
+function binaryToDecimalReduce(str: number | string) {
+    var input = String(str);
+    var binary = String(str)
       .split('')
       .filter(i => i === '1' || i === '0');
   

@@ -1,13 +1,13 @@
-const isValid = new RegExp(/^[01]+$/g)
+var isValid = new RegExp(/^[01]+$/g)
 
 // aqui atribui à const binary um valor de binário
-const input = "11001";
+var data = 1001;
 
 // nomeei a função que recebe um número como parâmetro para execução um número binário
-function binaryToDecimal(binary){
+function binaryToDecimalParse(binary: string | number): string | number |  Error{
     // criei uma validação que valida se o tipo do dado inserido é uma string
     // e se não for ele o transforma em uma
-    if(typeof(binary) !== String ){
+    if( binary !== ''){
         binary = binary.toString()
     }
 
