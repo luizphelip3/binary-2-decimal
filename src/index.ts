@@ -5,7 +5,7 @@ var input = 11001
 
 function binaryToDecimal(binary: string | number): string | number | Error
 { 
-    // criei uma validação que valida se o tip      o do dado inserido é uma string
+    // criei uma validação que valida se o tipo do dado inserido é uma string
     // e se não for ele o transforma em uma
     if(binary !== ''){
       binary = String(binary)
@@ -34,11 +34,15 @@ function binaryToDecimal(binary: string | number): string | number | Error
       // o binário por completo
         if (num[i] == '1'){
             decimalValue += base;
-            console.log('valor da base = ', base)
-            console.log('decimal Value = ', decimalValue)
+            console.log('valor da base durante o if = ', base)
+            console.log('decimal Value durante o if = ', decimalValue)
         }
       // e sempre que ele mudar de índice, ele fará o calculo do valor da base 
       // multiplicado por 2, e o resultado será o novo valor da base
+      
+      // essa fórmula substiitui de forma efetiva o método math.pow
+      // pois o valor da base sempre será  = potenciação da última execução + novo grau de 
+      // potenciação
         base = base * 2;
     }
     
