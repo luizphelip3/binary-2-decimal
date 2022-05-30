@@ -1,9 +1,9 @@
 // criado um Regex pra verificar se dado passado possui algum dado além de 0 e 1
 var isValid = new RegExp(/^[0,1]+$/g)
 
-var input = 11001
+var input = 1011
 
-function binaryToDecimal(binary: string | number): string | number | Error
+function binaryToDecimal(binary: string | number): number | Error
 { 
     // criei uma validação que valida se o tipo do dado inserido é uma string
     // e se não for ele o transforma em uma
@@ -32,6 +32,9 @@ function binaryToDecimal(binary: string | number): string | number | Error
       // criei uma condição que quando o valor do índice do array de binário for igual a 1
       // então o decimal value será ele mesmo + o valor da base, até percorrer
       // o binário por completo
+
+      // console.log(`indice ${num[i]}`)
+
         if (num[i] == '1'){
             decimalValue += base;
             console.log('valor da base durante o if = ', base)
@@ -45,7 +48,6 @@ function binaryToDecimal(binary: string | number): string | number | Error
       // potenciação
         base = base * 2;
     }
-    
     
     return decimalValue;
 }
